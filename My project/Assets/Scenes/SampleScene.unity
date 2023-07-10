@@ -252,6 +252,7 @@ GameObject:
   m_Component:
   - component: {fileID: 920479528}
   - component: {fileID: 920479529}
+  - component: {fileID: 920479530}
   m_Layer: 0
   m_Name: Left Wall
   m_TagString: Untagged
@@ -288,6 +289,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerXPos: 0
   playerYPos: 0
+  player: {fileID: 0}
+--- !u!61 &920479530
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 920479527}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.7, y: 10}
+  m_EdgeRadius: 0
 --- !u!1 &959149455
 GameObject:
   m_ObjectHideFlags: 0
@@ -337,6 +365,7 @@ MonoBehaviour:
   inputHoriz: 0
   isOnGround: 0
   speed: 0
+  gravMod: 0
 --- !u!61 &959149458
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -394,6 +423,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1569141980}
   - component: {fileID: 1569141981}
+  - component: {fileID: 1569141982}
   m_Layer: 0
   m_Name: Right Wall
   m_TagString: Untagged
@@ -430,6 +460,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerXPos: 0
   playerYPos: 0
+  player: {fileID: 0}
+--- !u!61 &1569141982
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1569141979}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.14832115, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 10}
+  m_EdgeRadius: 0
 --- !u!1 &1942265213
 GameObject:
   m_ObjectHideFlags: 0
@@ -440,6 +497,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1942265214}
   - component: {fileID: 1942265215}
+  - component: {fileID: 1942265216}
   m_Layer: 0
   m_Name: Floor
   m_TagString: Untagged
@@ -476,6 +534,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerXPos: 0
   playerYPos: 0
+  player: {fileID: 0}
+--- !u!61 &1942265216
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942265213}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 24, y: 0.1}
+  m_EdgeRadius: 0
 --- !u!1 &1963212546
 GameObject:
   m_ObjectHideFlags: 0
@@ -486,6 +571,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1963212547}
   - component: {fileID: 1963212548}
+  - component: {fileID: 1963212549}
   m_Layer: 0
   m_Name: Ceiling
   m_TagString: Untagged
@@ -522,3 +608,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerXPos: 0
   playerYPos: 0
+  player: {fileID: 0}
+--- !u!61 &1963212549
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1963212546}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 24, y: 0.1}
+  m_EdgeRadius: 0

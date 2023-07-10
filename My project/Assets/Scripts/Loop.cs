@@ -17,6 +17,7 @@ public class Loop : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        playerXPos = player.transform.position.x;
+        playerYPos = player.transform.position.y;
     }
 }
