@@ -267,7 +267,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 920479527}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -12, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -286,6 +286,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37042dd6e5c7a7e4988e2b3d6d98d921, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerXPos: 0
+  playerYPos: 0
 --- !u!1 &959149455
 GameObject:
   m_ObjectHideFlags: 0
@@ -407,7 +409,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1569141979}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 12, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -426,6 +428,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37042dd6e5c7a7e4988e2b3d6d98d921, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerXPos: 0
+  playerYPos: 0
 --- !u!1 &1942265213
 GameObject:
   m_ObjectHideFlags: 0
@@ -451,7 +455,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1942265213}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -470,6 +474,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37042dd6e5c7a7e4988e2b3d6d98d921, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerXPos: 0
+  playerYPos: 0
 --- !u!1 &1963212546
 GameObject:
   m_ObjectHideFlags: 0
@@ -495,7 +501,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1963212546}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -514,3 +520,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37042dd6e5c7a7e4988e2b3d6d98d921, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerXPos: 0
+  playerYPos: 0
