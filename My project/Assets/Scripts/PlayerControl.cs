@@ -7,6 +7,7 @@ public class PlayerControl : MonoBehaviour
     public float inputHoriz;
     public bool isOnGround;
     private Rigidbody2D playerRb;
+    public float speed;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,11 +17,13 @@ public class PlayerControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        inputHoriz = Input.GetAxis("Horizontal");
         if (Input.GetKeyDown(KeyCode.W) && isOnGround == true)
         {
             playerRb.AddForce(Vector3.up * 10, ForceMode2D.Impulse);
             isOnGround = false;
         }
+        transform.Translate(Vector3.right * Time.deltaTime * speed * inputHoriz); 
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
