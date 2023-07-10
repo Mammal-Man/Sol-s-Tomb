@@ -7,11 +7,13 @@ public class PlayerControl : MonoBehaviour
     public float inputHoriz;
     public bool isOnGround;
     private Rigidbody2D playerRb;
-    public float speed;
+    public float speed = 5;
     public float gravMod;
     public float playerPosX;
     public float playerPosY;
     public GameObject player;
+    private float xBound = 12;
+    private float yBound = 5;
 
     // Start is called before the first frame update
     void Start()
@@ -27,25 +29,30 @@ public class PlayerControl : MonoBehaviour
         playerPosX = player.transform.position.x;
         playerPosY = player.transform.position.y;
 
-        if (playerRb.transform.position.x < -12)
+
+        if (playerRb.transform.position.x < -xBound)
         {
-            Instantiate(player, new Vector3(12, playerPosY), player.transform.rotation);
+            playerRb.transform.position = new Vector3(xBound, playerPosY);
         }
-        if (playerRb.transform.position.x > 12)
+
+        if (playerRb.transform.position.x > xBound)
         {
-            Instantiate(player, new Vector3(-12, playerPosY), player.transform.rotation);
+            playerRb.transform.position = new Vector3(-xBound, playerPosY);
         }
-        if (playerRb.transform.position.y < -5)
+
+        if (playerRb.transform.position.y < -yBound)
         {
-            Instantiate(player, new Vector3(playerPosX, 5), player.transform.rotation);
+            playerRb.transform.position = new Vector3(playerPosX, yBound);
         }
-        if (playerRb.transform.position.y > 5)
+
+        if (playerRb.transform.position.y > yBound)
         {
-            Instantiate(player, new Vector3(playerPosX, -5), player.transform.rotation);
+            playerRb.transform.position = new Vector3(playerPosX, -yBound);
         }
+
         if (Input.GetKeyDown(KeyCode.W) && isOnGround == true)
         {
-            playerRb.AddForce(Vector3.up * 10, ForceMode2D.Impulse);
+            playerRb.AddForce(Vector3.up * 5, ForceMode2D.Impulse);
             isOnGround = false;
         }
         transform.Translate(Vector3.right * Time.deltaTime * speed * inputHoriz); 
