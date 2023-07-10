@@ -9,6 +9,10 @@ public class PlayerControl : MonoBehaviour
     private Rigidbody2D playerRb;
     public float speed;
     public float gravMod;
+    public float playerPosX;
+    public float playerPosY;
+    public GameObject player;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +24,25 @@ public class PlayerControl : MonoBehaviour
     void Update()
     {
         inputHoriz = Input.GetAxis("Horizontal");
+        playerPosX = player.transform.position.x;
+        playerPosY = player.transform.position.y;
+
+        if (playerRb.transform.position.x < -12)
+        {
+            Instantiate(player, new Vector3(12, playerPosY), player.transform.rotation);
+        }
+        if (playerRb.transform.position.x > 12)
+        {
+            Instantiate(player, new Vector3(-12, playerPosY), player.transform.rotation);
+        }
+        if (playerRb.transform.position.y < -5)
+        {
+            Instantiate(player, new Vector3(playerPosX, 5), player.transform.rotation);
+        }
+        if (playerRb.transform.position.y > 5)
+        {
+            Instantiate(player, new Vector3(playerPosX, -5), player.transform.rotation);
+        }
         if (Input.GetKeyDown(KeyCode.W) && isOnGround == true)
         {
             playerRb.AddForce(Vector3.up * 10, ForceMode2D.Impulse);
