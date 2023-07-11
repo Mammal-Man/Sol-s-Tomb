@@ -56,6 +56,11 @@ public class PlayerControl : MonoBehaviour
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse);
             isOnGround = false;
         }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            transform.Rotate(Vector3.forward, 90); 
+        }
         transform.Translate(Vector3.right * Time.deltaTime * speed * inputHoriz); 
     }
 
