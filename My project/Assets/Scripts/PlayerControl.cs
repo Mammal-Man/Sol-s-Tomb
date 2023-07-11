@@ -69,10 +69,13 @@ public class PlayerControl : MonoBehaviour
         if(inputHoriz == 0)
         {
             isWalking = false;
+            walkingParticle.Pause();
+            walkingParticle.gameObject.SetActive(false);
         }
         else
         {
             isWalking = true;
+            walkingParticle.gameObject.SetActive(true);
             walkingParticle.Play();
         }
        

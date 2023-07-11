@@ -648,6 +648,22 @@ PrefabInstance:
       propertyPath: InitialModule.gravitySource
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1254864943650923399, guid: 83d0537f42aec7841b969868c4624068, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1254864943650923399, guid: 83d0537f42aec7841b969868c4624068, type: 3}
+      propertyPath: InitialModule.gravitySource
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1254864943743370660, guid: 83d0537f42aec7841b969868c4624068, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1254864943743370660, guid: 83d0537f42aec7841b969868c4624068, type: 3}
+      propertyPath: InitialModule.gravitySource
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1254864943758427347, guid: 83d0537f42aec7841b969868c4624068, type: 3}
       propertyPath: m_RootOrder
       value: 4
