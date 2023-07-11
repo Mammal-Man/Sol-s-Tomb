@@ -373,6 +373,7 @@ MonoBehaviour:
   playerPosX: 0
   playerPosY: 0
   player: {fileID: 959149455}
+  jumpForce: 6.45
 --- !u!50 &959149459
 Rigidbody2D:
   serializedVersion: 4

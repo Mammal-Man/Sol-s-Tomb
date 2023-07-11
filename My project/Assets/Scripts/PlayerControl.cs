@@ -14,6 +14,7 @@ public class PlayerControl : MonoBehaviour
     public GameObject player;
     private float xBound = 12;
     private float yBound = 5;
+    public float jumpForce = 6.45f;
 
     // Start is called before the first frame update
     void Start()
@@ -52,7 +53,7 @@ public class PlayerControl : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.W) && isOnGround == true)
         {
-            playerRb.AddForce(Vector3.up * 5, ForceMode2D.Impulse);
+            playerRb.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse);
             isOnGround = false;
         }
         transform.Translate(Vector3.right * Time.deltaTime * speed * inputHoriz); 
