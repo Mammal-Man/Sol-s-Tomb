@@ -80,7 +80,7 @@ public class PlayerControl : MonoBehaviour
             isWalking = true;
             walkingParticle.gameObject.SetActive(true);
             walkingParticle.Play();
-            playerSFX.PlayOneShot(walksound, 5.0f);
+            playerSFX.PlayOneShot(walksound, 0.5f);
         }
        
         transform.Translate(Vector3.right * Time.deltaTime * speed * inputHoriz); 
