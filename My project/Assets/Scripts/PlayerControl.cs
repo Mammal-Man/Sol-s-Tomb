@@ -17,6 +17,8 @@ public class PlayerControl : MonoBehaviour
     public float jumpForce = 6.45f;
     public ParticleSystem walkingParticle;
     public bool isWalking;
+    public AudioClip walksound;
+    private AudioSource playerSFX;
 
 
     // Start is called before the first frame update
@@ -24,6 +26,7 @@ public class PlayerControl : MonoBehaviour
     {
         playerRb = GetComponent<Rigidbody2D>();
         Physics.gravity *= gravMod;
+        playerSFX = GetComponent<AudioSource>();
 
     }
 
@@ -72,11 +75,12 @@ public class PlayerControl : MonoBehaviour
             walkingParticle.Pause();
             walkingParticle.gameObject.SetActive(false);
         }
-        else
+        else if (isOnGround == true)
         {
             isWalking = true;
             walkingParticle.gameObject.SetActive(true);
             walkingParticle.Play();
+            playerSFX.PlayOneShot(walksound, 5.0f);
         }
        
         transform.Translate(Vector3.right * Time.deltaTime * speed * inputHoriz); 
