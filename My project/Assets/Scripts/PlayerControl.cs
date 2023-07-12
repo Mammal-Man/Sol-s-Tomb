@@ -19,12 +19,14 @@ public class PlayerControl : MonoBehaviour
     public bool isWalking;
     public AudioClip walksound;
     private AudioSource playerSFX;
+    private Animator likeToMoveIt;
 
 
     // Start is called before the first frame update
     void Start()
     {
         playerRb = GetComponent<Rigidbody2D>();
+        likeToMoveIt = GetComponent<Animator>();
         Physics.gravity *= gravMod;
         playerSFX = GetComponent<AudioSource>();
 
@@ -74,6 +76,7 @@ public class PlayerControl : MonoBehaviour
             isWalking = false;
             walkingParticle.Pause();
             walkingParticle.gameObject.SetActive(false);
+            likeToMoveIt.SetBool("isWalking", false);
         }
         else if (isOnGround == true)
         {
@@ -81,9 +84,19 @@ public class PlayerControl : MonoBehaviour
             walkingParticle.gameObject.SetActive(true);
             walkingParticle.Play();
             playerSFX.PlayOneShot(walksound, 0.5f);
+            likeToMoveIt.SetTrigger("isWalking");
         }
-       
-        transform.Translate(Vector3.right * Time.deltaTime * speed * inputHoriz); 
+
+        if (inputHoriz < 0)
+        {
+            likeToMoveIt.SetBool("facingLeft", true);
+        }
+        else if (inputHoriz > 0)
+        {
+            likeToMoveIt.SetBool("facingLeft", false);
+        }
+        transform.Translate(Vector3.right * Time.deltaTime * speed * inputHoriz);
+        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
