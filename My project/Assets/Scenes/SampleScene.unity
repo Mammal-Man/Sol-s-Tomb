@@ -471,7 +471,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputHoriz: 0
   isOnGround: 0
-  speed: 5
+  speed: 2.5
   gravMod: 0
   playerPosX: 0
   playerPosY: 0

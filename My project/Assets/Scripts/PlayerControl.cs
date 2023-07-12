@@ -7,7 +7,7 @@ public class PlayerControl : MonoBehaviour
     public float inputHoriz;
     public bool isOnGround;
     private Rigidbody2D playerRb;
-    public float speed = 5;
+    public float speed = 2.5f;
     public float gravMod = 1;
     public float playerPosX;
     public float playerPosY;
