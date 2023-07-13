@@ -5,6 +5,9 @@ using UnityEngine;
 public class NextLevel : MonoBehaviour
 {
     public bool nextLevel;
+    public float level;
+    public float baseMove = 27;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,8 +25,23 @@ public class NextLevel : MonoBehaviour
 
         if (nextLevel == true)
         {
-            transform.position = new Vector3(transform.position.x - 27, 0);
+            transform.position = new Vector3(transform.position.x - baseMove, 0);
             nextLevel = false;
+            level += 1;
+        }
+
+        if (level == 5)
+        {
+            baseMove = 28;
+        }
+        else
+        {
+            baseMove = 27;
+        }
+
+        if (level < 19)
+        {
+            baseMove = 0;
         }
     }
 }
