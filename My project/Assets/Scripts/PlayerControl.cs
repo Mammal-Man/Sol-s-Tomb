@@ -66,11 +66,6 @@ public class PlayerControl : MonoBehaviour
             isOnGround = false;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            transform.Rotate(Vector3.forward, 90); 
-        }
-
         if(inputHoriz == 0)
         {
             isWalking = false;
