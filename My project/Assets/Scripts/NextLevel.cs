@@ -22,7 +22,7 @@ public class NextLevel : MonoBehaviour
 
         if (nextLevel == true)
         {
-            transform.position = new Vector3(transform.position.x - 23, 0);
+            transform.position = new Vector3(transform.position.x - 27, 0);
             nextLevel = false;
         }
     }
