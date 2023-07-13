@@ -39,7 +39,7 @@ public class NextLevel : MonoBehaviour
             baseMove = 27;
         }
 
-        if (level < 19)
+        if (level > 19)
         {
             baseMove = 0;
         }
