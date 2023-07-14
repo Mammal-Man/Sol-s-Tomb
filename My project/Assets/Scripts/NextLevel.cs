@@ -48,6 +48,11 @@ public class NextLevel : MonoBehaviour
         {
             baseMove = 0;
         }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            nextLevel = true;
+        }
     }
 
     public void OnTriggerEnter2D(Collider2D collider)
