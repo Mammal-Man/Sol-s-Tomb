@@ -18,7 +18,7 @@ public class NextLevel : MonoBehaviour
     void Update()
     {
 
-        if (nextLevel == true)
+        if (nextLevel == true && gameObject.CompareTag("TileMap"))
         {
             transform.position = new Vector3(transform.position.x - baseMove, transform.position.y);
             nextLevel = false;
@@ -50,10 +50,11 @@ public class NextLevel : MonoBehaviour
         }
     }
 
-    public void OnTriggerEnter(Collider collider)
+    public void OnTriggerEnter2D(Collider2D collider)
     {
-        if (gameObject.CompareTag("Player"))
-        {    
+        if (collider.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("Door is touched");
             nextLevel = true;
         }
               

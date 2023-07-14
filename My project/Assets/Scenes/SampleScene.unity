@@ -846,7 +846,7 @@ GameObject:
   - component: {fileID: 1496294925}
   m_Layer: 0
   m_Name: BG Template
-  m_TagString: Untagged
+  m_TagString: TileMap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29868,7 +29868,7 @@ GameObject:
   - component: {fileID: 1808210302}
   m_Layer: 0
   m_Name: Levels
-  m_TagString: Untagged
+  m_TagString: TileMap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
