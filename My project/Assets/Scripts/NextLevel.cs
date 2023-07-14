@@ -6,7 +6,7 @@ public class NextLevel : MonoBehaviour
 {
     public bool nextLevel;
     public float level;
-    public float baseMove = 27;
+    public float baseMove;
 
     // Start is called before the first frame update
     void Start()
@@ -50,7 +50,7 @@ public class NextLevel : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider collider)
+    public void OnTriggerEnter(Collider collider)
     {
         if (gameObject.CompareTag("Player"))
         {    
